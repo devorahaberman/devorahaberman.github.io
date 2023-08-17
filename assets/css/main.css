@@ -185,7 +185,7 @@ html {
 }
 
 body {
-  background: #1b1f22;
+  background: #1b221c;
 }
 
 body.is-preload *,
@@ -544,7 +544,7 @@ select {
 
 select option {
   color: #ffffff;
-  background: #1b1f22;
+  background: #1b221c;
 }
 
 select:focus::-ms-value {
@@ -749,7 +749,7 @@ input[type="radio"] + label:before {
 .image:before {
   pointer-events: none;
   background-image: url("../../images/overlay.png");
-  background-color: rgba(19, 21, 25, 0.5);
+  background-color: rgba(19, 25, 19, 0.5);
   border-radius: 4px;
   content: "";
   display: block;
@@ -1177,7 +1177,7 @@ input[type="button"].primary,
 button.primary,
 .button.primary {
   background-color: #ffffff;
-  color: #1b1f22 !important;
+  color: #1b221d !important;
   font-weight: 600;
 }
 
@@ -1239,7 +1239,7 @@ button {
   -webkit-transition-delay: 0.75s;
   -ms-transition-delay: 0.75s;
   transition-delay: 0.75s;
-  background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)),
+  background-image: linear-gradient(to top, rgba(19, 25, 20, 0.5), rgba(19, 25, 20, 0.5)),
     url("../../images/overlay.png");
   background-size: auto, 256px 256px;
   background-position: center, center;
@@ -1347,10 +1347,10 @@ body.is-preload #bg:before {
     opacity 0.325s ease-in-out;
   -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
   transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-  background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-  background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-  background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-  background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+  background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%,  rgba(27, 34, 28, 0.85);
+  background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%,  rgba(27, 34, 28, 0.85);
+  background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%,  rgba(27, 34, 28, 0.85);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%,  rgba(27, 34, 28, 0.85);
   max-width: 100%;
   text-align: center;
 }
@@ -1633,7 +1633,7 @@ body.is-preload #header .content .inner {
   position: relative;
   width: 40rem;
   max-width: 100%;
-  background-color: rgba(27, 31, 34, 0.85);
+  background-color: rgba(27, 34, 28, 0.85);
   border-radius: 4px;
   opacity: 0;
 }
