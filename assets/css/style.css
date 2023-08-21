@@ -11,7 +11,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #272829;
+  color: #1e211f;
 }
 
 a {
@@ -79,7 +79,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: #1e211f;
   overflow-y: auto;
 }
 
@@ -109,7 +109,7 @@ h6 {
 #header .profile .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #212431;
+  background: #1e211f;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -403,7 +403,7 @@ section {
   line-height: 40px;
   display: block;
   font-weight: 700;
-  color: #050d18;
+  color: #1e211f;
   margin-left: 60px;
 }
 
@@ -446,7 +446,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: #1e211f;
 }
 
 .skills .progress .skill .val {
@@ -474,7 +474,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #1e211f;
 }
 
 .resume .resume-item {
@@ -490,7 +490,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: #1e211f;
   margin-bottom: 10px;
 }
 
@@ -552,7 +552,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #272829;
+  color: #1e211f;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -873,7 +873,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #050d18;
+  color: #1e211f;
 }
 
 .contact .info p {
@@ -1083,7 +1083,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #040b14;
+  background: #1e211f;
 }
 
 #footer .copyright {
