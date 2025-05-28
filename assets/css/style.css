@@ -500,6 +500,14 @@ section {
   margin-bottom: 10px;
 }
 
+.skills .skills-item ul {
+  padding-left: 20px;
+}
+
+.skills .skills-item ul li {
+  padding-bottom: 10px;
+}
+
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
