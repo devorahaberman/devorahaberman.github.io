@@ -392,10 +392,16 @@ section {
 .sheet .section-title {
   padding-bottom: 30px;
 }
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-    }
+
+.sheet .progress-bar-wrap {
+  background: #dce8f8;
+  height: 10px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
 
     table {
       width: 100%;
