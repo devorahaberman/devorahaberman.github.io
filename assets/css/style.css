@@ -357,6 +357,18 @@ section {
   padding: 0;
 }
 
+.about .progress-bar-wrap {
+  background: #dce8f8;
+  height: 10px;
+}
+
+.about .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #7b818a;
+}
+
 .about .content ul li {
   margin-bottom: 20px;
   display: flex;
