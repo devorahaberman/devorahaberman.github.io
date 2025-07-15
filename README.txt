@@ -1,47 +1,46 @@
-# Personal Portfolio Website
+💻 Personal Portfolio Website
+Welcome to my personal developer portfolio — built with HTML5, CSS3, and a responsive design powered by BootstrapMade. This site highlights my projects, skills, and live GitHub activity in one clean, accessible experience.
 
-Welcome to my personal developer portfolio — built with HTML5, CSS3, and a responsive layout from [BootstrapMade](https://bootstrapmade). This site showcases my best projects, tech stack, and live GitHub activity.
+🚀 Live Site: devorahaberman.github.io
+🛠 Built With: HTML, CSS, Boxicons, AOS.js, GitHub Readme Stats
 
-> 💡 **Deployed on GitHub Pages**  
-> 🔗 [View Live Site](https://devorahaberman.github.io/)  
+✨ Features
+📌 Interactive project showcase with detailed descriptions, icons, and live/demo links
 
----
+📄 Downloadable resume (PDF)
 
-## 🚀 Features
+🧠 Auto-updating "Facts" section
 
-- **Facts** list that loads and updates
-- **Resume** downloadable pdf
-- **Live GitHub stats** including streaks and contributions  
-- **Portfolio project showcase** with descriptions, icons, and live/demo links  
-- **Responsive design** for mobile, tablet, and desktop  
-- **Animated scrolling** and lightbox image preview
+🔥 Integrated GitHub activity with contributions and streaks
 
----
+📱 Responsive layout for mobile, tablet, and desktop
 
-## 🛠 Built With
+🎞️ Scroll-based animations and lightbox image previews
 
-- **HTML5 + CSS3**
-- **BootstrapMade  template
-- **Boxicons** for icons
-- **AOS.js** for scroll animations
-- **GitHub Readme Stats** for activity integration
+🧰 Tech Stack
+HTML5 & CSS3
 
----
+BootstrapMade iPortfolio Template
 
-🧙 About Me
-I’m a software developer with a passion for building accessible, user-friendly applications. This site is a visual showcase of my work and skills.
+Boxicons for UI icons
 
-📫 Connect With Me
-- GitHub: https://github.com/devorahaberman
-- LinkedIn: https://www.linkedin.com/in/devorahaberman/
+AOS.js for scroll animations
 
-📄 License
-Based on a free template by HTML5 UP
-Content © [Devorah Aberman]. Icons by Boxicons. GitHub Stats by @anuraghazra.
+GitHub Readme Stats by @anuraghazra
 
----
+👩‍💻 About Me
+I'm a software developer with a passion for building inclusive, user-centered applications. This portfolio is a live reflection of my skills, style, and the things I love to create.
 
-Template Name: iPortfolio
-Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+🌐 Connect with Me
+GitHub: @devorahaberman
+
+LinkedIn: linkedin.com/in/devorahaberman
+
+📄 License & Credits
+Template: iPortfolio by BootstrapMade
+
+Icons: Boxicons
+
+GitHub Stats: @anuraghazra
+
+Content © [Devorah Aberman]
