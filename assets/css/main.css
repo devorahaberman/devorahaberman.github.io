@@ -1455,7 +1455,7 @@ body.is-preload #bg:before {
   transition-delay: 0.25s;
   padding: 3rem 2rem;
   max-height: 40rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #header .content .inner > :last-child {
@@ -1696,7 +1696,7 @@ body.is-preload #header .content .inner {
   height: 4rem;
   cursor: pointer;
   text-indent: 4rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   white-space: nowrap;
 }
 
