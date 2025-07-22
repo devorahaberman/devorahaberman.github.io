@@ -118,6 +118,41 @@ section {
 }
 
 
+.card {
+  border: none;
+  background-color: #fff;
+}
+
+.card-img-top {
+  border-radius: 0.5rem;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding-top: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #444;
+}
+
+.portfolio-item .bx {
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.portfolio-item .bx:hover {
+  color: #0056b3;
+}
+
+
 body {
   line-height: 1;
 }
@@ -1218,6 +1253,7 @@ button {
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
