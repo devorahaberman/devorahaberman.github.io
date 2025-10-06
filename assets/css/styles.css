@@ -71,6 +71,9 @@
   /* Transitions */
   --transition-duration: 200ms;
   --transition-easing: ease-in-out;
+
+  /* Add / edit this to control horizontal padding site-wide */
+  --site-side-padding: 24px; /* change this value (e.g. 16px, 32px) to increase/decrease side padding */
 }
 
 /* Base styles */
@@ -82,6 +85,9 @@ body {
   background-color: var(--color-background);
   margin: 0;
   padding: 0;
+  padding-left: var(--site-side-padding);
+  padding-right: var(--site-side-padding);
+  box-sizing: border-box;
 }
 
 /* Headings */
@@ -185,6 +191,37 @@ a:visited { color: var(--color-link-visited); }
   height: auto;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-medium);
+}
+
+/* Optional: if you prefer centered content with a max width, use .container instead */
+.container {
+  max-width: var(--max-container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--site-side-padding);
+  padding-right: var(--site-side-padding);
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the whole group horizontally */
+  gap: var(--space-xl);    /* controls even spacing between items (edit this to change spacing) */
+  padding: var(--space-md) 0;
+  background: transparent;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: var(--font-size-h2);
+}
+
+.navbar a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 8px;
 }
 
 /* Responsive tweaks */
