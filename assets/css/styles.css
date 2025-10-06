@@ -181,14 +181,22 @@ a:visited { color: var(--color-link-visited); }
 }
 
 .home-about .image {
-  flex: 1 1 300px;
-  max-width: 400px;
-  text-align: center;
+  /* changed: make the right column take a larger share and center content */
+  flex: 0 0 45%;        /* ~45% of the row on wide screens (adjust as needed) */
+  max-width: 520px;     /* upper limit for the column */
+  display: flex;        /* center the img inside the column */
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
 }
 
 .home-about .image img {
-  max-width: 100%;
+  /* changed: allow the image to grow and remain centered */
+  width: 100%;
+  max-width: 480px;     /* change this value to control final image size */
   height: auto;
+  object-fit: cover;
+  display: block;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-medium);
 }
@@ -234,5 +242,9 @@ a:visited { color: var(--color-link-visited); }
   .home-about .text,
   .home-about .image {
     max-width: 100%;
+  }
+
+  .home-about .image img {
+    max-width: 80%;
   }
 }
