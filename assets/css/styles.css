@@ -73,7 +73,8 @@
   --transition-easing: ease-in-out;
 
   /* Add / edit this to control horizontal padding site-wide */
-  --site-side-padding: 24px; /* change this value (e.g. 16px, 32px) to increase/decrease side padding */
+  --site-side-padding: 24px;
+  --section-gap: 24px; /* change this to control the break between colored sections */
 }
 
 /* Base styles */
@@ -162,6 +163,10 @@ a:visited { color: var(--color-link-visited); }
   background-color: var(--color-accent);
   padding: var(--space-xxl);
   gap: var(--space-xl);
+
+  /* added: create visible space (shows body background) between .home and .about */
+  margin-bottom: var(--section-gap);
+  border-radius: var(--radius-md); /* optional: makes the gap look nicer */
 }
 
 .home .text {
@@ -237,6 +242,9 @@ a:visited { color: var(--color-link-visited); }
   background-color: var(--color-accent);
   padding: var(--space-xxl);
   color: var(--color-primary);
+
+  /* match visual style of .home */
+  border-radius: var(--radius-md);
 }
 
 /* ensure text inside the centered container keeps normal max width */
