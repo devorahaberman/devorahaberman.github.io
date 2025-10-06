@@ -1,0 +1,148 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Inter:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap');
+
+:root {
+  /* Typography */
+  --font-heading: 'League Spartan', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'IBM Plex Mono', monospace;
+
+  --font-size-base: 16px;
+  --font-size-h1: 36px;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+  --font-size-caption: 14px;
+
+  --line-height-body: 1.5;
+  --line-height-heading: 1.2;
+  --line-height-caption: 1.4;
+
+  --letter-spacing-body: 0em;
+  --letter-spacing-heading: 0.02em;
+  --letter-spacing-caption: 0.03em;
+
+  /* Colors */
+  --color-primary: #152149;
+  --color-accent: #96B1D5;
+  --color-background: #d9d9d9;
+  --color-text: #000000;
+  --color-link-default: #000000;
+  --color-link-hover: #509fd6;
+  --color-link-visited: #5c6f9c;
+
+  /* Buttons */
+  --btn-primary-bg: #152149;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #1e2c5f;
+  --btn-primary-border: #152149;
+
+  --btn-secondary-bg: #96B1D5;
+  --btn-secondary-text: #152149;
+  --btn-secondary-hover: #509fd6;
+  --btn-secondary-border: #152149;
+
+  --btn-tertiary-bg: transparent;
+  --btn-tertiary-text: #152149;
+  --btn-tertiary-hover: #f0f0f0;
+  --btn-tertiary-border: #152149;
+
+  /* Layout */
+  --max-container-width: 1200px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* Radius & Shadows */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-round: 50%;
+  --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  /* Z-index */
+  --z-base: 0;
+  --z-nav: 10;
+  --z-modal: 100;
+
+  /* Transitions */
+  --transition-duration: 200ms;
+  --transition-easing: ease-in-out;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
+  color: var(--color-primary);
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+
+/* Links */
+a {
+  color: var(--color-link-default);
+  text-decoration: none;
+  transition: color var(--transition-duration) var(--transition-easing);
+}
+a:hover { color: var(--color-link-hover); }
+a:visited { color: var(--color-link-visited); }
+
+/* Buttons */
+.button {
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-duration) var(--transition-easing);
+}
+.button.primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: 1px solid var(--btn-primary-border);
+}
+.button.primary:hover {
+  background-color: var(--btn-primary-hover);
+}
+.button.secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--btn-secondary-border);
+}
+.button.secondary:hover {
+  background-color: var(--btn-secondary-hover);
+}
+.button.tertiary {
+  background-color: var(--btn-tertiary-bg);
+  color: var(--btn-tertiary-text);
+  border: 1px solid var(--btn-tertiary-border);
+}
+.button.tertiary:hover {
+  background-color: var(--btn-tertiary-hover);
+}
+
+/* Cards */
+.card {
+  background-color: #ffffff;
+  box-shadow: var(--shadow-medium);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-xl);
+}
