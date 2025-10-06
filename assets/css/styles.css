@@ -147,18 +147,7 @@ a:visited { color: var(--color-link-visited); }
   margin-bottom: var(--space-xl);
 }
 
-    body {
-      margin: 0;
-      background-color: #152149;
-      font-family: 'League Spartan', sans-serif;
-      color: #96B1D5;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .content {
+.content {
       text-align: right;
       margin-right: 50px;
     }
