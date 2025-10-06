@@ -257,8 +257,9 @@ a:visited { color: var(--color-link-visited); }
   max-width: var(--max-container-width);
   margin-left: auto;
   margin-right: auto;
-  /* vertical padding (top/bottom) and horizontal padding (left/right) */
-  padding: var(--space-lg) var(--site-side-padding);
+  /* increased vertical padding and same horizontal site padding
+     Edit --space-xxl in :root to change the vertical padding site-wide */
+  padding: var(--space-xxl) var(--site-side-padding);
 }
 
 /* keep the section title left-aligned */
@@ -267,9 +268,9 @@ a:visited { color: var(--color-link-visited); }
   margin-bottom: var(--space-md);
 }
 
-/* center the rest of the about content and add vertical spacing */
+/* left-align the rest of the about content and keep spacing */
 .about .container > *:not(h2) {
-  text-align: center;
+  text-align: left;
   padding-top: var(--space-sm);
   padding-bottom: var(--space-sm);
 }
