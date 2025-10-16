@@ -75,7 +75,7 @@ footer.footer {
   --letter-spacing-caption: 0.03em;
 
   /* footer height (existing) */
-  --footer-height: 84px;
+  --footer-height: 120px; /* change this to increase/decrease footer space */
 }
 
 /* Base typography & background */
@@ -165,15 +165,21 @@ footer.footer {
   bottom: 0;
   z-index: 999;
   width: 100%;
+  min-height: var(--footer-height);   /* ensures footer has room for content */
+  display: flex;
+  flex-direction: column;            /* stack content vertically */
+  align-items: center;               /* center horizontally */
+  justify-content: center;           /* center vertically inside footer */
+  padding: 1rem;                     /* internal padding (tweak as needed) */
+  box-sizing: border-box;
 }
 
 .footer {
   background-color: var(--color-primary);
   color: var(--btn-primary-text);
   text-align: center;
-  padding: 2rem 1rem 1rem;
-  margin-top: auto;
-  flex-shrink: 0;
+  padding: 1.25rem 1rem;
+  box-sizing: border-box;
 }
 
 .footer-container {
