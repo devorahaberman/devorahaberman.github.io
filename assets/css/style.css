@@ -310,15 +310,13 @@ footer.footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem 1rem;
+  padding: 1rem;
   box-sizing: border-box;
-  text-align: center;
-  flex-direction: column;
 }
 
+/* Updated: removed backdrop-filter so footer no longer blurs page content */
 .footer {
   background-color: rgba(255,255,255,0.15);
-  /* backdrop-filter removed so footer no longer blurs page content */
   color: #fff;
   text-align: center;
   width: 100%;
@@ -326,12 +324,11 @@ footer.footer {
   padding: 1rem 0;
 }
 
-/* Footer layout: left-aligned contact button, right-aligned social links */
+/* Footer inner container: left contact, right social */
 .footer-container {
-  /* replace any previous footer-container rules with this */
   display: flex;
   align-items: center;
-  justify-content: space-between; /* pushes .footer-content left and .social-links right */
+  justify-content: space-between;
   gap: 1rem;
   width: 100%;
   max-width: var(--max-width);
