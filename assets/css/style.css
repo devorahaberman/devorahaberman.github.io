@@ -325,29 +325,39 @@ footer.footer {
   box-sizing: border-box;
 }
 
+/* Footer layout: left-aligned contact button, right-aligned social links */
 .footer-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  width: 100%;
+  /* replace any previous footer-container rules with this */
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0;
-  margin: 0;
+  justify-content: space-between; /* pushes .footer-content left and .social-links right */
+  gap: 1rem;
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
-.footer-content h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
-  color: #fff;
+/* ensure the contact button sits flush on the left inside .footer-content */
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.footer-content p {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-bottom: 1rem;
+/* social links row on the right */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* keep footer copyright centered on its own row */
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.75rem;
 }
 
 .contact-link {
@@ -366,31 +376,19 @@ footer.footer {
   color: #fff;
 }
 
-.social-links {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
+/* Responsive: stack footer elements on narrow screens */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
-.social-links a {
-  color: #fff;
-  font-size: 1.3rem;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: var(--color-link);
-}
-
-.copyright {
-  font-size: 0.8rem;
-  color: #ccc;
-  margin-top: 0.75rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 1rem;
+  .footer-content,
+  .social-links {
+    justify-content: center; /* center when stacked */
+    width: 100%;
+  }
 }
 
 /* =========================
