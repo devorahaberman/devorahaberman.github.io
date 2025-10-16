@@ -26,6 +26,31 @@ footer.footer {
   flex-shrink: 0;
 }
 
+/* set a footer height variable to tweak easily */
+:root {
+  --footer-height: 84px; /* change this to match footer visual height */
+}
+
+/* ensure body reserves space for the fixed footer */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: var(--footer-height); /* prevents content from being hidden behind footer */
+}
+
+/* fixed footer overlayed at bottom */
+footer.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--footer-height);
+  z-index: 1000; /* same or higher than navbar if you want footer on top */
+}
+
+/* if you want footer behind the navbar, set z-index lower than .navbar (navbar z-index:1000) */
+
 /* Navbar */
 .navbar {
   position: fixed;
