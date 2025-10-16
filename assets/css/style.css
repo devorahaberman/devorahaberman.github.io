@@ -81,13 +81,19 @@ body {
 
 .logo {
   display: flex;
-  align-items: center;
-  gap: 0.6rem;
+  flex-direction: column; /* stack the two lines vertically */
+  align-items: flex-start; /* left-align; change to center to center them */
+  gap: 0.15rem;
 }
 
 .logo h1 {
   font-size: 1rem;
   letter-spacing: 0.05em;
+}
+
+.logo p {
+  margin: 0;
+  line-height: 1.1;
 }
 
 .nav-links {
@@ -304,8 +310,10 @@ footer.footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.25rem 1rem;
   box-sizing: border-box;
+  text-align: center;
+  flex-direction: column;
 }
 
 .footer {
@@ -321,6 +329,13 @@ footer.footer {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-content h3 {
@@ -353,8 +368,9 @@ footer.footer {
 
 .social-links {
   display: flex;
+  gap: 1rem;
+  align-items: center;
   justify-content: center;
-  gap: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -372,7 +388,7 @@ footer.footer {
 .copyright {
   font-size: 0.8rem;
   color: #ccc;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 1rem;
 }
