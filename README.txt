@@ -45,3 +45,7 @@ Icons: Boxicons
 GitHub Stats: @anuraghazra
 
 Content © [Devorah Aberman]
+
+
+Photo by <a href="https://unsplash.com/@emmafranceslogan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Emma Frances Logan</a> on <a href="https://unsplash.com/photos/wall-of-plant-cUGa_uRs9AE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+License: CC BY 4.0 - https://creativecommons.org/licenses/by/4.0/
