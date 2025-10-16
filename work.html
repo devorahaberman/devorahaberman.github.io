@@ -3,36 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Work — Devorah Nina Aberman</title>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <title>Work — Devorah Nina Aberman</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Inline fallback to ensure same hero background + blur as home -->
+  <style>
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 0 1.5rem;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* update this path if your image is elsewhere */
+      background-image: url('assets/img/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(6px) brightness(0.6);
+      transform: scale(1.03);
+      z-index: -1;
+    }
+    .hero-content { position: relative; z-index: 1; color: #fff; }
+    .hero-content h1 { font-size: 2.25rem; margin: 0; }
+    @media (min-width: 768px) {
+      .hero-content h1 { font-size: 3rem; }
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index-new.html">Home</a>
-    <a href="work.html" class="active">Work</a>
-    <a href="index-new.html#contact">Contact</a>
-  </nav>
-
-  <main class="container">
-    <section id="work">
-      <h1>My Work</h1>
-
-      <!-- Example project cards — duplicate/replicate as needed -->
-      <div class="card">
-        <h3>Project Title 1</h3>
-        <p>Short description, tools used, and outcome.</p>
-        <a href="projects/project1/index.html">View project</a>
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <h1>Devorah Nina Aberman</h1>
       </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html" aria-current="page">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      <div class="card">
-        <h3>Project Title 2</h3>
-        <p>Short description, tools used, and outcome.</p>
-        <a href="projects/project2/index.html">View project</a>
-      </div>
-
-      <!-- Add more .card entries for each portfolio item -->
-    </section>
-  </main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Coming soon</h1>
+    </div>
+  </section>
 </body>
 </html>
