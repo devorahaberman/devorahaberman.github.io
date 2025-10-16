@@ -5,11 +5,25 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
-  font-family: 'Inter', 'Poppins', sans-serif;
-  color: #fff;
-  height: 100vh;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* let the page content expand and push footer down */
+.hero {
+  flex: 1 0 auto; /* allow hero to grow and fill available space */
+}
+
+/* footer stays at bottom when content is short */
+footer.footer {
+  flex-shrink: 0;
 }
 
 /* Navbar */
@@ -71,6 +85,7 @@ body {
   padding: 0 1.5rem;
   z-index: 0;          /* ensure pseudo-element sits behind content */
   overflow: hidden;
+  flex: 1 0 auto; /* allow hero to grow and fill available space */
 }
 
 .hero::before {
@@ -147,6 +162,15 @@ body {
 }
 
 /* Footer */
+footer.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+}
+
 .footer {
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -154,6 +178,7 @@ body {
   text-align: center;
   padding: 2rem 1rem 1rem;
   margin-top: auto;
+  flex-shrink: 0;
 }
 
 .footer-container {
