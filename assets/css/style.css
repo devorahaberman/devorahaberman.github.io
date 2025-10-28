@@ -217,7 +217,7 @@ nav a:hover {
   min-height: 64vh;           /* controls vertical space — try 60vh–80vh */
   padding: 3rem var(--site-side-padding);
   box-sizing: border-box;
-  background: linear-gradient(180deg, #0044ff, #002266);
+  background: linear-gradient(180deg, #96B1D5, #002266);
   color: #fff;
 }
 
