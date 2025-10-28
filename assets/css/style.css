@@ -433,6 +433,40 @@ footer .copyright {
   gap: 1.5rem;
 }
 
+/* Ensure images in the floating container always fit a 4x6 (2:3) area */
+.card-media {
+  width: 100%;
+  aspect-ratio: 2 / 3;        /* 4x6 -> 2:3 ratio */
+  max-height: 60vh;           /* optional limit so very tall viewports don't make it huge */
+  background: #f6f8fb;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* fills the 2:3 box; use 'contain' if you prefer whole image visible */
+  display: block;
+}
+
+/* Fallback for browsers without aspect-ratio support */
+@supports not (aspect-ratio: 2 / 3) {
+  .card-media {
+    position: relative;
+    padding-top: calc(3 / 2 * 100%); /* 150% padding to emulate 2:3 (height = 1.5 * width) */
+  }
+  .card-media img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 /* Responsive: on narrow screens use full width and normal flow */
 @media (max-width: 900px) {
   .floating-container {
