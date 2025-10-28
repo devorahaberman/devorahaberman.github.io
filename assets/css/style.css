@@ -24,7 +24,9 @@
 
   /* base for floating container sizing (adjust if your original max was different) */
   --floating-base: 1100px;
-  --floating-width: calc(var(--floating-base) * 3); /* 50% wider than the current double size (now 3× base) */
+  --floating-width: 800px;   /* floating container width (user specified) */
+
+  --nav-height: 72px;        /* header height used to offset the floating container */
 }
 
 /* =========================
@@ -127,9 +129,11 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: calc(100vh - var(--nav-height)); /* allow space for fixed header */
+  padding-top: var(--nav-height);               /* start below the header */
   text-align: center;
-  padding: 0 var(--site-side-padding);
+  padding-left: var(--site-side-padding);
+  padding-right: var(--site-side-padding);
   overflow: hidden;
   flex: 1 0 auto;
   z-index: 0; /* ensure stacking context for pseudo-element */
@@ -411,11 +415,9 @@ footer .copyright {
 
 /* Floating container — make it a white card above the hero background */
 .floating-container {
-  /* use the --floating-width variable but never exceed available viewport space
-     (subtract side padding so it doesn't create horizontal scroll) */
-  width: min(var(--floating-width), calc(100vw - (var(--site-side-padding) * 2)));
-  max-width: none;
-  height: 100vh;            /* span top → bottom */
+  width: var(--floating-width);
+  max-width: calc(100% - (var(--site-side-padding) * 2)); /* prevent horizontal scroll on small viewports */
+  height: calc(100vh - var(--nav-height) - var(--footer-height)); /* span between header and footer */
   margin: 0 auto;           /* center horizontally */
   padding: 2.5rem;
   box-sizing: border-box;
@@ -433,11 +435,11 @@ footer .copyright {
   gap: 1.5rem;
 }
 
-/* Ensure images in the floating container always fit a 4x6 (2:3) area */
+/* Images: make them square (6x6 -> 1:1) and fit inside a capped box */
 .card-media {
   width: 100%;
-  aspect-ratio: 2 / 3;        /* 4x6 -> 2:3 ratio */
-  max-height: 60vh;           /* optional limit so very tall viewports don't make it huge */
+  aspect-ratio: 1 / 1;    /* square (6x6) */
+  max-width: 360px;       /* cap the visible image box; change if you want larger */
   background: #f6f8fb;
   overflow: hidden;
   display: flex;
@@ -448,34 +450,24 @@ footer .copyright {
 .card-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* fills the 2:3 box; use 'contain' if you prefer whole image visible */
+  object-fit: cover;
   display: block;
 }
 
-/* Fallback for browsers without aspect-ratio support */
-@supports not (aspect-ratio: 2 / 3) {
-  .card-media {
-    position: relative;
-    padding-top: calc(3 / 2 * 100%); /* 150% padding to emulate 2:3 (height = 1.5 * width) */
-  }
-  .card-media img {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-/* Responsive: on narrow screens use full width and normal flow */
+/* Responsive: stack / shrink on small screens */
 @media (max-width: 900px) {
   .floating-container {
-    width: calc(100% - 2.5rem); /* account for page padding */
+    width: calc(100% - 2.5rem);
     max-width: 100%;
     height: auto;
+    margin-top: calc(var(--nav-height) + 1rem);
     padding: 1.25rem;
-    margin: 1.25rem;
     border-radius: 10px;
+  }
+
+  .card-media {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
   }
 }
 
