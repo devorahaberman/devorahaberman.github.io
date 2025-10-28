@@ -354,7 +354,7 @@ footer.footer {
   background: transparent; /* visual handled by footer.footer above */
   color: var(--color-text);
   text-align: center;
-  width: 150%;
+  width: 100%;
   box-sizing: border-box;
   padding: 1rem 0;
 }
@@ -412,7 +412,7 @@ footer .copyright {
 /* Floating container — make it a white card above the hero background */
 .floating-container {
   /* width will be twice the base but never exceed viewport width */
-  width: min(var(--floating-width), 100%);
+  width: min(var(--floating-width), 150%);
   max-width: none;          /* allow width to exceed previous max if viewport allows */
   height: 100vh;            /* span from top to bottom of viewport */
   margin: 0 auto;           /* center horizontally */
