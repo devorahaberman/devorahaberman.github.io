@@ -293,12 +293,33 @@ nav a:hover {
 
 .skill-card ul {
   list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 .skill-card li {
-  margin-bottom: 0.5rem;
-  color: #333;
+  position: relative;
+  padding-left: 1.4rem; /* space for the symbol */
+  margin-bottom: 0.45rem;
 }
+
+/* decorative bullet — change the character, color, or size as needed */
+.skill-card li::before {
+  content: "•";             /* or use "›", "–", "✓", or an emoji */
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  color: var(--color-primary, #152149);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* If you have <ol> you want to render as bullets, add class="bulleted" to the <ol> */
+ol.bulleted,
+ol.bulleted li {
+  list-style: none;
+}
+ol.bulleted li::before { content: "•"; }
 
 /* =========================
    Footer
