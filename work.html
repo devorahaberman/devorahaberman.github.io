@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <title>Work — Devorah Nina Aberman</title>
+</head>
 <body>
-
----
-layout: default
-title: Work — Devorah Nina Aberman
----
+  <!-- Header will be injected by include-partials.js -->
+  <div id="site-header"></div>
 
   <!-- Hero / centered floating container above the background -->
   <section class="hero">
@@ -18,7 +21,7 @@ title: Work — Devorah Nina Aberman
         <div class="portfolio-grid">
           <a class="card" href="projects/project1/index.html" aria-label="Open Project 1">
             <div class="card-media">
-              <img src="assets/img/project1.jpg" alt="Project 1 screenshot">
+              <img src="/assets/img/project1.jpg" alt="Project 1 screenshot">
             </div>
             <h3 class="card-title">Project One</h3>
             <p class="card-desc">A short description of project one — tools used and primary outcome.</p>
@@ -26,7 +29,7 @@ title: Work — Devorah Nina Aberman
 
           <a class="card" href="projects/project2/index.html" aria-label="Open Project 2">
             <div class="card-media">
-              <img src="assets/img/project2.jpg" alt="Project 2 screenshot">
+              <img src="/assets/img/project2.jpg" alt="Project 2 screenshot">
             </div>
             <h3 class="card-title">Project Two</h3>
             <p class="card-desc">A short description of project two — highlights and link to demo.</p>
@@ -34,7 +37,7 @@ title: Work — Devorah Nina Aberman
 
           <a class="card" href="projects/project3/index.html" aria-label="Open Project 3">
             <div class="card-media">
-              <img src="assets/img/project3.jpg" alt="Project 3 screenshot">
+              <img src="/assets/img/project3.jpg" alt="Project 3 screenshot">
             </div>
             <h3 class="card-title">Project Three</h3>
             <p class="card-desc">A short description of project three — technologies and role.</p>
@@ -44,5 +47,10 @@ title: Work — Devorah Nina Aberman
       </div> <!-- /.floating-container -->
     </div> <!-- /.hero-content -->
   </section>
+
+  <!-- Footer will be injected by include-partials.js -->
+  <div id="site-footer"></div>
+
+  <script src="/assets/js/include-partials.js" defer></script>
 </body>
 </html>

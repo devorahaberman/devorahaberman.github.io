@@ -333,7 +333,7 @@ footer.footer {
 .footer-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* center everything horizontally on the page */
   gap: 1rem;
   width: 100%;
   max-width: var(--max-width);
@@ -341,19 +341,19 @@ footer.footer {
   box-sizing: border-box;
 }
 
-/* ensure the contact button sits flush on the left inside .footer-content */
+/* ensure the contact button (if present) is centered */
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
-/* social links row on the right */
+/* social links centered in a row */
 .social-links {
   display: flex;
   gap: 1rem;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 /* keep footer copyright centered on its own row */
