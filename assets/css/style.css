@@ -23,8 +23,8 @@
   --font-heading: "League Spartan", sans-serif;
 
   /* base for floating container sizing (adjust if your original max was different) */
-  --floating-base: 1100px;                       /* original container width */
-  --floating-width: calc(var(--floating-base) * 2); /* twice as wide */
+  --floating-base: 1100px;
+  --floating-width: calc(var(--floating-base) * 3); /* 50% wider than the current double size (now 3× base) */
 }
 
 /* =========================
@@ -411,21 +411,18 @@ footer .copyright {
 
 /* Floating container — make it a white card above the hero background */
 .floating-container {
-  /* width will be twice the base but never exceed viewport width */
-  width: min(var(--floating-width), 150%);
+  /* width will be twice the current --floating-width but never exceed viewport width */
+  width: min(calc(var(--floating-width) * 2), 100%);
   max-width: none;          /* allow width to exceed previous max if viewport allows */
   height: 100vh;            /* span from top to bottom of viewport */
   margin: 0 auto;           /* center horizontally */
   padding: 2.5rem;          /* inner spacing */
   box-sizing: border-box;
-
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 18px 40px rgba(16,24,40,0.12);
   border: 1px solid rgba(16,24,40,0.04);
   z-index: 2;
-
-  /* center the inner content vertically and horizontally */
   display: flex;
   flex-direction: column;
   align-items: center;
