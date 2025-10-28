@@ -21,6 +21,10 @@
   /* typography */
   --font-body: "Inter", sans-serif;
   --font-heading: "League Spartan", sans-serif;
+
+  /* base for floating container sizing (adjust if your original max was different) */
+  --floating-base: 1100px;                       /* original container width */
+  --floating-width: calc(var(--floating-base) * 2); /* twice as wide */
 }
 
 /* =========================
@@ -402,33 +406,58 @@ footer .copyright {
 
 /* Floating container — make it a white card above the hero background */
 .floating-container {
-  background-color: #ffffff;            /* white background */
-  border-radius: 12px;                  /* rounded corners */
-  padding: 2.5rem;                      /* inner spacing (edit to change) */
-  max-width: 1100px;                    /* container width */
-  margin: 2.5rem auto;                  /* center + vertical space */
-  box-shadow: 0 18px 40px rgba(16,24,40,0.12); /* subtle shadow */
-  border: 1px solid rgba(16,24,40,0.04); /* soft border for separation */
-  z-index: 2;                           /* sit above hero background */
+  /* width will be twice the base but never exceed viewport width */
+  width: min(var(--floating-width), 100%);
+  max-width: none;          /* allow width to exceed previous max if viewport allows */
+  height: 100vh;            /* span from top to bottom of viewport */
+  margin: 0 auto;           /* center horizontally */
+  padding: 2.5rem;          /* inner spacing */
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(16,24,40,0.12);
+  border: 1px solid rgba(16,24,40,0.04);
+  z-index: 2;
+
+  /* center the inner content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Keep the portfolio grid from expanding the container vertically;
+   allow scrolling inside if needed on small screens */
+.portfolio-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  max-height: calc(100vh - 10rem); /* keep grid within the container height */
+  overflow: auto;
+  padding: 0.5rem;
   box-sizing: border-box;
 }
 
-/* ensure hero provides breathing room around the card */
-.hero {
-  padding: 4rem 1rem; /* adjust top/bottom spacing around the floating card */
-}
-
-/* responsive tweak */
-@media (max-width: 640px) {
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  :root {
+    --floating-width: 100%; /* on narrow screens, use full width */
+  }
   .floating-container {
+    height: auto;          /* let content determine height on small screens */
     padding: 1.25rem;
+    border-radius: 10px;
     margin: 1.25rem;
+  }
+  .hero {
+    height: auto;
+    padding: 1.25rem 0;
   }
 }
 
-/* =========================
-   Responsive
-   ========================= */
 @media (max-width: 768px) {
   .hero-content h2 {
     font-size: 2.2rem;
