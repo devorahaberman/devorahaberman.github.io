@@ -413,12 +413,37 @@ footer .copyright {
   color: #fff;
 }
 
+/* =========================
+   Work Page
+   ========================= */
+/* Work page — force black text for content inside the floating container */
+.work-page {
+  color: #000;
+}
+
+.work-page .floating-container,
+.work-page .floating-container * {
+  color: #000;
+}
+
+/* More specific overrides for card text (if needed) */
+.work-page .card-title,
+.work-page .card-desc,
+.work-page .skill-card,
+.work-page .skill-card * {
+  color: #000;
+}
+
+/* =========================
+   Floating Container
+   ========================= */
 /* Floating container — make it a white card above the hero background */
 .floating-container {
   width: var(--floating-width);
   max-width: calc(100% - (var(--site-side-padding) * 2)); /* prevent horizontal scroll on small viewports */
-  height: calc(100vh - var(--nav-height) - var(--footer-height)); /* span between header and footer */
-  margin: 0 auto;           /* center horizontally */
+  height: auto; /* allow container to grow with content */
+  min-height: calc(100vh - var(--nav-height) - var(--footer-height)); /* still at least viewport height between header/footer */
+  margin: 0 auto;
   padding: 2.5rem;
   box-sizing: border-box;
 
@@ -431,7 +456,7 @@ footer .copyright {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* start at top so cards stack naturally */
   gap: 1.5rem;
 }
 
