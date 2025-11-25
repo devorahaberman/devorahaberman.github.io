@@ -7,17 +7,16 @@
   <link rel="stylesheet" href="/assets/css/style.css" />
   <title>Work — Devorah Nina Aberman</title>
 </head>
-<body>
+<body class="work-page">
   <!-- Header will be injected by include-partials.js -->
   <div id="site-header"></div>
 
-  <!-- Hero / centered floating container above the background -->
   <section class="hero">
     <div class="hero-content">
       <div class="floating-container">
         <h2 class="floating-title">Work Portfolio</h2>
 
-        <!-- Portfolio grid: add/remove .card entries as needed -->
+        <!-- All project cards must live inside this single grid -->
         <div class="portfolio-grid">
           <div class="card" role="article">
             <div class="card-media">
@@ -34,7 +33,6 @@
             <h3 class="card-title">Brainstorm</h3>
             <p class="card-desc">A notetaking tool for brainstorming and organizing ideas.</p>
           </div>
-        </div> <!-- /.portfolio-grid -->
 
           <div class="card" role="article">
             <div class="card-media">
@@ -43,18 +41,16 @@
             <h3 class="card-title">Chunk Site</h3>
             <p class="card-desc">A biographical site showcasing a fluffy Tibetan Mastiff and his adventures.</p>
           </div>
-        </div> <!-- /.portfolio-grid -->
 
-         <div class="card" role="article">
+          <div class="card" role="article">
             <div class="card-media">
               <img src="/assets/img/portfolio/kasztl-photography.png" alt="Kasztl Photography screenshot" width="600" height="600" loading="lazy" />
             </div>
             <h3 class="card-title">Kasztl Photography</h3>
             <p class="card-desc">A photography portfolio showcasing various projects and styles.</p>
           </div>
-        </div> <!-- /.portfolio-grid -->
 
-        <div class="card" role="article">
+          <div class="card" role="article">
             <div class="card-media">
               <img src="/assets/img/portfolio/ralla-klepak.jpg" alt="Ralla Klepak screenshot" width="600" height="600" loading="lazy" />
             </div>
@@ -62,7 +58,6 @@
             <p class="card-desc">A performing arts website showcasing their community outreach programs.</p>
           </div>
         </div> <!-- /.portfolio-grid -->
-
       </div> <!-- /.floating-container -->
     </div> <!-- /.hero-content -->
   </section>
